@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ album.author }}</a>
+                <small class="text-muted p-2">{{ album.date_posted }}</small>
+                <div>
+                    <a href="{{ url_for('update_post', post_id=album.post_id) }}" class="btn btn-secondary btn-sm mt-1 mb-1">Update</a>
+                    <a href="{{ url_for('delete_post', post_id=album.post_id) }}" class="btn btn-danger btn-sm m-1">Delete</a>
+                </div>
+            </div>
+            <h2 class="article-title">{{ album.title }}</h2>
+            <p class="article-content">{{ album.album_date }}</p>
+        </div>
+    </article>
+{% endblock content %}

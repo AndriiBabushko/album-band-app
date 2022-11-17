@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for album in albums %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ album.author }}</a>
+              <small class="text-muted p-2">{{ album.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('post', post_id=album.post_id) }}">{{ album.title }}</a></h2>
+            <p class="article-content">{{ album.album_date }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
