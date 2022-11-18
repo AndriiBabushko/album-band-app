@@ -1,1 +1,1 @@
-worker: python app.py
+albumBand: python app.py
